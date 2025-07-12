@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: http-depl
+  name: http-depl
+spec:
+  replicas: 8 
+  selector:
+    matchLabels:
+      app: http-depl
+  template:
+    metadata:
+      labels:
+        app: http-depl
+    spec:
+      containers:
+      - image: httpd:alpine3.18
+        name: httpd
+  strategy:
+    type: Recreate 
+
