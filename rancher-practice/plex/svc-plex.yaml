@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: depl-plex
+  name: depl-plex
+  namespace: plex
+spec:
+  ports:
+  - port: 32400
+    protocol: TCP
+    targetPort: 32400
+  selector:
+    app: depl-plex
+  type: LoadBalancer
+

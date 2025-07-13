@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: depl-plex
+  name: depl-plex
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: depl-plex
+  template:
+    metadata:
+      labels:
+        app: depl-plex
+    spec:
+      containers:
+      - image: lscr.io/linuxserver/plex:latest
+        name: plex
