@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: depl-linkding
+  name: depl-linkding
+  namespace: linkding
+spec:
+  ports:
+  - port: 9090
+    protocol: TCP
+    targetPort: 9090
+  selector:
+    app: depl-linkding
+  type: LoadBalancer
