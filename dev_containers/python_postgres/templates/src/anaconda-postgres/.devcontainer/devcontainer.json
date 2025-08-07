@@ -1,0 +1,1 @@
+{"name":"Anaconda (Python 3) \u0026 PostgreSQL","workspaceFolder":"/workspaces/${localWorkspaceFolderBasename}","dockerComposeFile":["docker-compose.yml"],"service":"app"}
