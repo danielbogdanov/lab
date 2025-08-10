@@ -1,0 +1,21 @@
+<p class="text-sm italic text-gray-700 dark:text-white mb-4">
+              Level: Intro (score: 1)
+            </p>
+<p class="text-gray-700"></p><p>In this Bite you learn how to lookup values from a dictionary or in Python: <code>dict</code>.</p>
+<p>You are presented with <code>WORKOUT_SCHEDULE dict</code> (constant) with keys = days and values = workouts (or rest up). Complete <code>get_workout_motd</code> that receives a day string, title case it so the function can receive case insensitive days, look it up in the dict and do two things:</p>
+<ul>
+<li>If the day (key) is not in the dictionary, return <code>INVALID_DAY</code>, we don't want this function to continue.</li>
+<li>If the key is in the dictionary, return <code>CHILL_OUT</code> or <code>TRAIN</code> depending if it's a <code>REST</code> day or not. The latter you will need to string-interpolate using <code>format</code>.</li>
+</ul>
+<p>Also check out the docstring and tests. Have fun and keep calm and code in Python!</p>
+<p><strong>Update 25th of Nov 2019:</strong> previously this Bite required re-raising the <code>KeyError</code>, but as that's already the default behavior of a missing key in a <strong>dict</strong>, we changed the requirements to return a value instead.</p><p></p>
+<hr class="my-4 dark:border-gray-900"/>
+<p class="text-gray-700"></p>
+<div class="mt-4">
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/dict">dict</a>
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/format">format</a>
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/ternary">ternary</a>
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/exception-handling">exception handling</a>
+<a class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full tag" href="/bites/tag/string-manipulation">string manipulation</a>
+</div>
+</div>

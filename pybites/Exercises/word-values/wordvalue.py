@@ -17,14 +17,29 @@ LETTER_SCORES = {letter: score for score, letters in scrabble_scores
 
 def load_words():
     """Load the words dictionary (DICTIONARY constant) into a list and return it"""
-    pass
-
+    with open(DICTIONARY) as dict_file:
+        words = [ x.strip() for x in dict_file]
+    return words
 
 def calc_word_value(word):
     """Given a word calculate its value using the LETTER_SCORES dict"""
-    pass
+    value = 0
+    for letter in word:
+        value += LETTER_SCORES.get(letter.upper(), 0) 
+    return value
 
 
 def max_word_value(words):
     """Given a list of words calculate the word with the maximum value and return it"""
-    pass
+    max_value = 0
+    max_value_word = ''
+    for word in words:
+        if calc_word_value(word) > max_value:
+            max_value = calc_word_value(word)
+            max_value_word = word
+
+    return max_value_word
+
+print(LETTER_SCORES)
+#print(calc_word_value('zygote'))
+print(max_word_value(load_words()))
